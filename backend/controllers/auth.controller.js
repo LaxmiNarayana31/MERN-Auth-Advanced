@@ -134,13 +134,13 @@ const login = async (req, res) => {
   }
 };
 
-// Logout to remove the token cookie 
+// Logout to remove the token cookie
 const logout = async (req, res) => {
   res.clearCookie("token");
   res.status(200).json({ success: true, message: "Logged out successfully" });
 };
 
-// Forgot password to send a reset link to the user's email 
+// Forgot password to send a reset link to the user's email
 export const forgotPassword = async (req, res) => {
   const { email } = req.body;
   try {
